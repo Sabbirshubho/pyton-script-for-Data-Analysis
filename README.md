@@ -1,4 +1,5 @@
 # python script for data analysis
+
 1. importTable_chrome_browser.py
 This python script is used for scratch the table from webpage in recursive manner. Each row has another link where another table was there. By using this script
 you can extract thousands of table from web page at a time. Standard browser executable file will be needed. Ideal emple can be worldmeter corona virus web page.

@@ -2,21 +2,13 @@
 """
 Created on Thu Jun 18 04:55:47 2020
 
-@author: User
+@author: Sabbir
 """
 import selenium
 from selenium import webdriver
 import pandas as pd  #panda 0.23.4
 from openpyxl import load_workbook
-#from time import sleep
 from selenium.webdriver.chrome.options import Options
-# from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.common.by import By
-# from selenium.webdriver.support import expected_conditions as EC
-#import selenium.webdriver.remote.webdriver.WebDriver
-# from tk import asksaveasfilename
-# from openpyxl import load_workbook
-# from openpyxl import Workbook
 chrome_options = Options()
 op=webdriver.ChromeOptions()
 op.add_argument('headless')
@@ -32,9 +24,9 @@ web_count=2
 for r in range(web_count):
     try:
         # https://intranet-grid.hms.se/intra/scala/pl/pl_pending.php?PL01001=6679&scco=HS
-        url='https://intranet-grid.hms.se/intra/scala/pl/pl_pending.php?PL01001=' #first part of url
+        url='-----------' #first part of url
         url+=str(numeric_value[r])
-        url+='&scco=HS'
+        url+='----'
         driver = selenium.webdriver.Chrome(options=op)
         driver.get(url)
         driver.implicitly_wait(30)
@@ -142,13 +134,5 @@ writer.book = book
 book.remove_sheet(std)
 
 book.save('Data.xlsx')
-
-# prov = ['RAFI', 'Braun']
-# wb = load_workbook(path) 
-# ws = wb['6679','6685']
-# for city in prov:
-#     wb.copy_worksheet(ws)
-#     ws = wb.worksheets[-1]
-#     ws.title = city
 
 # wb.save('Data.xlsx')

@@ -2,7 +2,7 @@
 """
 Created on Fri Sep 11 08:37:34 2020
 
-@author: sash
+@author: sabbir
 """
 
 
@@ -28,7 +28,7 @@ lists_missing=[]
 
 for i in uniqueStockCode:
     try:                   # which are in lists
-        index = np.where(df1['IXXAT Nr.'] == i)[0][0]
+        index = np.where(df1['---'] == i)[0][0]
         MOQ = df1['MOQ'][index]
         count_stockcode = 0
         d=[]
